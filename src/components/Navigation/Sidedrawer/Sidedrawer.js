@@ -5,20 +5,20 @@ import style from './Sidedrawer.css';
 import Backdrop from '../../UI/Backdrop/Backdrop';
 import Aux from '../../../hoc/ReactAux/ReactAux';
 
-const sideDrawer = (props) => {
-  let attachedStyles = [style.SideDrawer, style.Close];
+const sideDrawer = ( props ) => {
+  let attachedClasses = [style.SideDrawer, style.Close];
   if (props.open) {
-    attachedStyles = [style.SideDrawer, style.Open];
+    attachedClasses = [style.SideDrawer, style.Open];
   }
   return (
      <Aux>
        <Backdrop show={props.open} clicked={props.closed}/>
-       <div className={attachedStyles.join(' ')}>
+       <div className={attachedClasses.join(' ')}>
          <div className={style.Logo}>
-           <Logo/>
+           <Logo />
          </div>
          <nav>
-           <NavigationItems/>
+           <NavigationItems />
          </nav>
        </div>
      </Aux>
